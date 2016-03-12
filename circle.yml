@@ -4,8 +4,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t kz8s/centos .
+    - make build
 test:
   override:
-    - docker run kz8s/centos | grep VERSION
-    - docker run kz8s/centos yum info letsencrypt
+    - make test
