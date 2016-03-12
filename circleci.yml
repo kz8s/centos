@@ -1,0 +1,10 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - docker info
+    - docker build -t kz8s/centos .
+test:
+  override:
+    - docker run kz8s/centos | grep VERSION
