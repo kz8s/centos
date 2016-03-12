@@ -8,3 +8,4 @@ dependencies:
 test:
   override:
     - docker run kz8s/centos | grep VERSION
+    - docker run kz8s/centos yum info letsencrypt
